@@ -2,6 +2,8 @@
 
 Small Compose lib that makes `LazyColumn` / `LazyRow` feel a bit rubbery. Scroll fast and the items at the front lag behind a little, like they're on a stretchy band. Nothing weird happens to layout or measuring, it's all just `graphicsLayer` under the hood.
 
+<img width="720" height="405" alt="Timeline_1x_24fps" src="https://github.com/user-attachments/assets/95bb6592-0502-498e-aa71-89d22431e6a1" />
+
 ---
 
 ## Usage
