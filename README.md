@@ -6,6 +6,30 @@ Small Compose lib that makes `LazyColumn` / `LazyRow` feel a bit rubbery. Scroll
 
 ---
 
+## Install
+
+Distributed via [JitPack](https://jitpack.io).
+
+In your `settings.gradle.kts`:
+
+```kotlin
+dependencyResolutionManagement {
+    repositories {
+        google()
+        mavenCentral()
+        maven("https://jitpack.io")
+    }
+}
+```
+
+In your app/library `build.gradle.kts`:
+
+```kotlin
+implementation("com.github.makzimi:scroll-effect-lazy:0.1.0")
+```
+
+---
+
 ## Usage
 
 Swap your `LazyColumn` / `LazyRow` for the wrapper, toss in a `scrollEffect` lambda, done:
