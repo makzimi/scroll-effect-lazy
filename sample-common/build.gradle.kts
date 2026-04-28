@@ -6,7 +6,6 @@ plugins {
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.compose.multiplatform)
     alias(libs.plugins.android.kotlin.multiplatform.library)
-    alias(libs.plugins.maven.publish)
     alias(libs.plugins.kotlin.compose)
 }
 
@@ -19,18 +18,17 @@ kotlin {
     jvm()
 
     android {
-        namespace = "com.maxkach.scrolleffects"
+        namespace = "com.maxkach.elasticlist.common"
         compileSdk { version = release(37) }
+        androidResources.enable = true
     }
 
-    listOf(iosArm64(), iosSimulatorArm64()).forEach {
-        it.binaries.framework {
-            baseName = "scroll-effects"
-        }
-    }
+    listOf(iosArm64(), iosSimulatorArm64())
 
     sourceSets {
         commonMain.dependencies {
+            implementation(project(":scroll-effects"))
+
             implementation(libs.compose.material3)
             implementation(libs.compose.runtime)
             implementation(libs.compose.foundation)
@@ -38,17 +36,13 @@ kotlin {
             implementation(libs.compose.components.resources)
             implementation(libs.compose.ui.tooling.preview)
 
-            implementation(libs.kotlinx.datetime)
-        }
-
-
-        jvmMain.dependencies {
-            implementation(compose.desktop.currentOs)
-            implementation(libs.kotlinx.coroutines.swing)
+            implementation(libs.androidx.navigation.compose)
         }
     }
 }
 
-mavenPublishing {
-    // TODO: Add publishing info
+compose.desktop {
+    application {
+        mainClass = "MainKt"
+    }
 }
