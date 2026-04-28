@@ -39,7 +39,7 @@ android {
 
 dependencies {
     implementation(project(":scroll-effects"))
-    implementation(project(":sample"))
+    implementation(project(":sample-common"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

@@ -23,6 +23,6 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Scroll Effect Lazy"
-include(":sample")
+include(":sample-common")
 include(":sample-android")
 include(":scroll-effects")
