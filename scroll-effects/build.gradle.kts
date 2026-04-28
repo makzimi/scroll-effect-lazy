@@ -40,6 +40,12 @@ kotlin {
 
             implementation(libs.kotlinx.datetime)
         }
+
+
+        jvmMain.dependencies {
+            implementation(compose.desktop.currentOs)
+            implementation(libs.kotlinx.coroutines.swing)
+        }
     }
 }
 
