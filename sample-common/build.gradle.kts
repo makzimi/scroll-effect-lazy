@@ -40,3 +40,9 @@ kotlin {
         }
     }
 }
+
+compose.desktop {
+    application {
+        mainClass = "MainKt"
+    }
+}
