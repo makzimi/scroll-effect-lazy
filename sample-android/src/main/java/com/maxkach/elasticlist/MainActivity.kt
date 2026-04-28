@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import com.maxkach.scrolleffects.navigation.AppNavigation
+import com.maxkach.elasticlist.navigation.AppNavigation
 import com.maxkach.elasticlist.ui.theme.ElasticListTheme
 
 class MainActivity : ComponentActivity() {

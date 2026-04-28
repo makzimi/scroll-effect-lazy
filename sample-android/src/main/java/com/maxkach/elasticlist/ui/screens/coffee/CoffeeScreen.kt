@@ -19,9 +19,6 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.filled.Add
 import androidx.compose.material3.Card
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilledIconButton
@@ -41,11 +38,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.maxkach.elasticlist.R
 import com.maxkach.elasticlist.ui.effects.EffectPreset
 import com.maxkach.elasticlist.ui.effects.EffectPresetPicker
 import com.maxkach.elasticlist.ui.effects.asScrollEffect
-import com.maxkach.elasticlist.ui.screens.coffee.Drink
-import com.maxkach.elasticlist.ui.screens.coffee.drinks
 import com.maxkach.elasticlist.ui.theme.ElasticListTheme
 import com.maxkach.scrolleffects.ScrollEffectLazyRow
 
@@ -66,7 +62,7 @@ fun CoffeeScreen(
                     title = { Text("Drinks") },
                     navigationIcon = {
                         IconButton(onClick = onBack) {
-                            Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
+                            Icon(painterResource(R.drawable.arrow_back_24), contentDescription = "Back")
                         }
                     },
                 )
@@ -192,7 +188,7 @@ private fun DrinkCardMedium(drink: Drink) {
                             .size(32.dp),
                     ) {
                         Icon(
-                            Icons.Default.Add,
+                            painterResource(R.drawable.add_24),
                             contentDescription = "Add",
                             modifier = Modifier.size(18.dp),
                         )
@@ -245,7 +241,7 @@ private fun DrinkCardWide(drink: Drink) {
                 modifier = Modifier.size(32.dp),
             ) {
                 Icon(
-                    Icons.Default.Add,
+                    painterResource(R.drawable.add_24),
                     contentDescription = "Add",
                     modifier = Modifier.size(18.dp),
                 )
@@ -299,7 +295,7 @@ private fun DrinkCardLarge(drink: Drink) {
                     .size(36.dp),
             ) {
                 Icon(
-                    Icons.Default.Add,
+                    painterResource(R.drawable.add_24),
                     contentDescription = "Add",
                     modifier = Modifier.size(20.dp),
                 )

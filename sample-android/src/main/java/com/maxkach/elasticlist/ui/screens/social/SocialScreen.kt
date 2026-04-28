@@ -1,4 +1,4 @@
-package com.maxkach.scrolleffects.ui.screens.social
+package com.maxkach.elasticlist.ui.screens.social
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
@@ -16,8 +16,6 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -35,6 +33,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.maxkach.elasticlist.R
 import com.maxkach.elasticlist.ui.effects.EffectPreset
 import com.maxkach.elasticlist.ui.effects.EffectPresetPicker
 import com.maxkach.elasticlist.ui.effects.asScrollEffect
@@ -58,7 +57,10 @@ fun SocialScreen(
                     title = { Text("Feed") },
                     navigationIcon = {
                         IconButton(onClick = onBack) {
-                            Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
+                            Icon(
+                                painter = painterResource(R.drawable.arrow_back_24),
+                                contentDescription = "Back"
+                            )
                         }
                     },
                 )

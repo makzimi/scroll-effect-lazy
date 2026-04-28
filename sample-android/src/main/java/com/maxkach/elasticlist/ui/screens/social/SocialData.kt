@@ -1,6 +1,6 @@
-package com.maxkach.scrolleffects.ui.screens.social
+package com.maxkach.elasticlist.ui.screens.social
 
-import com.maxkach.scrolleffects.R
+import com.maxkach.elasticlist.R
 
 data class SocialImage(
     val id: Int,

@@ -1,4 +1,4 @@
-package com.maxkach.scrolleffects.navigation
+package com.maxkach.elasticlist.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -9,11 +9,11 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.maxkach.elasticlist.ui.effects.EffectPreset
-import com.maxkach.scrolleffects.ui.screens.coffee.CoffeeScreen
+import com.maxkach.elasticlist.ui.screens.coffee.CoffeeScreen
 import com.maxkach.scrolleffects.ui.screens.ecommerce.EcommerceScreen
-import com.maxkach.scrolleffects.ui.screens.home.HomeScreen
-import com.maxkach.scrolleffects.ui.screens.menu.MenuScreen
-import com.maxkach.scrolleffects.ui.screens.social.SocialScreen
+import com.maxkach.elasticlist.ui.screens.home.HomeScreen
+import com.maxkach.elasticlist.ui.screens.menu.MenuScreen
+import com.maxkach.elasticlist.ui.screens.social.SocialScreen
 
 object Destinations {
     const val HOME = "home"

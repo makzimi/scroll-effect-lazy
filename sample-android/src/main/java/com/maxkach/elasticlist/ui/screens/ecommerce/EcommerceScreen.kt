@@ -44,6 +44,8 @@ import androidx.compose.ui.unit.dp
 import com.maxkach.elasticlist.ui.effects.EffectPreset
 import com.maxkach.elasticlist.ui.effects.EffectPresetPicker
 import com.maxkach.elasticlist.ui.effects.asScrollEffect
+import com.maxkach.elasticlist.ui.screens.ecommerce.Product
+import com.maxkach.elasticlist.ui.screens.ecommerce.products
 import com.maxkach.elasticlist.ui.theme.ElasticListTheme
 import com.maxkach.scrolleffects.ScrollEffectLazyColumn
 

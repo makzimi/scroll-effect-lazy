@@ -1,6 +1,6 @@
-package com.maxkach.scrolleffects.ui.screens.ecommerce
+package com.maxkach.elasticlist.ui.screens.ecommerce
 
-import com.maxkach.scrolleffects.R
+import com.maxkach.elasticlist.R
 
 data class Product(
     val id: Int,

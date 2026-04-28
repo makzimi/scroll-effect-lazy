@@ -1,6 +1,6 @@
-package com.maxkach.scrolleffects.ui.screens.menu
+package com.maxkach.elasticlist.ui.screens.menu
 
-import com.maxkach.scrolleffects.R
+import com.maxkach.elasticlist.R
 
 data class Dish(
     val id: Int,
