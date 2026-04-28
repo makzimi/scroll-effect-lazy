@@ -10,7 +10,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.maxkach.elasticlist.ui.effects.EffectPreset
 import com.maxkach.elasticlist.ui.screens.coffee.CoffeeScreen
-import com.maxkach.scrolleffects.ui.screens.ecommerce.EcommerceScreen
+import com.maxkach.elasticlist.ui.screens.ecommerce.EcommerceScreen
 import com.maxkach.elasticlist.ui.screens.home.HomeScreen
 import com.maxkach.elasticlist.ui.screens.menu.MenuScreen
 import com.maxkach.elasticlist.ui.screens.social.SocialScreen

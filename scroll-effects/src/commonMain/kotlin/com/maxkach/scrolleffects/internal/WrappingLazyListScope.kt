@@ -51,7 +51,7 @@ internal class WrappingLazyListScope(
     override fun stickyHeader(
         key: Any?,
         contentType: Any?,
-        content: @Composable LazyItemScope.() -> Unit,
+        content: @Composable LazyItemScope.(Int) -> Unit,
     ) {
         cursor++
         // Sticky headers are not wrapped — they should stay visually pinned.

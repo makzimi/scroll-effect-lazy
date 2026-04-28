@@ -1,4 +1,4 @@
-package com.maxkach.scrolleffects.ui.screens.ecommerce
+package com.maxkach.elasticlist.ui.screens.ecommerce
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -15,10 +15,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.filled.ShoppingCart
-import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -41,11 +37,10 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.maxkach.elasticlist.R
 import com.maxkach.elasticlist.ui.effects.EffectPreset
 import com.maxkach.elasticlist.ui.effects.EffectPresetPicker
 import com.maxkach.elasticlist.ui.effects.asScrollEffect
-import com.maxkach.elasticlist.ui.screens.ecommerce.Product
-import com.maxkach.elasticlist.ui.screens.ecommerce.products
 import com.maxkach.elasticlist.ui.theme.ElasticListTheme
 import com.maxkach.scrolleffects.ScrollEffectLazyColumn
 
@@ -66,7 +61,10 @@ fun EcommerceScreen(
                     title = { Text("Shop") },
                     navigationIcon = {
                         IconButton(onClick = onBack) {
-                            Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
+                            Icon(
+                                painter = painterResource(R.drawable.arrow_back_24),
+                                contentDescription = "Back"
+                            )
                         }
                     },
                 )
@@ -133,7 +131,7 @@ private fun ProductCard(product: Product) {
                 Spacer(Modifier.height(8.dp))
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Icon(
-                        Icons.Default.Star,
+                        painterResource(R.drawable.star_24),
                         contentDescription = null,
                         tint = Color(0xFFFFC107),
                         modifier = Modifier.size(16.dp),
@@ -177,7 +175,7 @@ private fun ProductCard(product: Product) {
                         )
                     ) {
                         Icon(
-                            Icons.Default.ShoppingCart,
+                            painterResource(R.drawable.shopping_cart_24),
                             contentDescription = null,
                             tint = Color.Black,
                             modifier = Modifier.size(24.dp),
