@@ -8,7 +8,7 @@ espressoCore = "3.7.0"
 lifecycleRuntimeKtx = "2.10.0"
 activityCompose = "1.13.0"
 composeBom = "2026.04.01"
-navigationCompose = "2.9.8"
+navigationCompose = "2.9.2"
 mavenPublish = "0.36.0"
 material3 = "1.10.0-alpha05"
 compose-multiplatform = "1.11.0-beta03"
@@ -31,7 +31,7 @@ androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "u
 androidx-compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
-androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
+androidx-navigation-compose = { group = "org.jetbrains.androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
 
 # CMP
 compose-components-resources = { module = "org.jetbrains.compose.components:components-resources", version.ref = "compose-multiplatform" }

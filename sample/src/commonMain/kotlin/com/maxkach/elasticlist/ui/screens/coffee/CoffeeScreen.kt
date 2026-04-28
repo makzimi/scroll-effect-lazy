@@ -153,7 +153,7 @@ private fun DrinkCardMedium(drink: Drink) {
                 horizontalAlignment = Alignment.CenterHorizontally,
             ) {
                 Image(
-                    painter = painterResource(drink.resId),
+                    painter = painterResource(drink.res),
                     contentDescription = null,
                     modifier = Modifier
                         .size(90.dp)
@@ -213,7 +213,7 @@ private fun DrinkCardWide(drink: Drink) {
             verticalAlignment = Alignment.CenterVertically,
         ) {
             Image(
-                painter = painterResource(drink.resId),
+                painter = painterResource(drink.res),
                 contentDescription = null,
                 modifier = Modifier
                     .fillMaxHeight()
@@ -266,7 +266,7 @@ private fun DrinkCardLarge(drink: Drink) {
                 horizontalAlignment = Alignment.CenterHorizontally,
             ) {
                 Image(
-                    painter = painterResource(drink.resId),
+                    painter = painterResource(drink.res),
                     contentDescription = null,
                     modifier = Modifier
                         .fillMaxWidth(),

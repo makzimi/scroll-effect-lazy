@@ -20,7 +20,7 @@ kotlin {
 
     android {
         namespace = "com.maxkach.scrolleffects"
-        compileSdk { version = release(36) }
+        compileSdk { version = release(37) }
     }
 
     listOf(iosArm64(), iosSimulatorArm64()).forEach {
