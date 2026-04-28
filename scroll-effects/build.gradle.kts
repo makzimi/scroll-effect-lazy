@@ -1,55 +1,48 @@
-import com.vanniktech.maven.publish.AndroidSingleVariantLibrary
+@file:OptIn(ExperimentalWasmDsl::class)
+
+import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 
 plugins {
-    alias(libs.plugins.android.library)
-    alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.kotlin.multiplatform)
+    alias(libs.plugins.compose.multiplatform)
+    alias(libs.plugins.android.kotlin.multiplatform.library)
     alias(libs.plugins.maven.publish)
+    alias(libs.plugins.kotlin.compose)
 }
 
-android {
-    namespace = "com.maxkach.scrolleffects"
-    compileSdk {
-        version = release(36)
+kotlin {
+    wasmJs {
+        browser()
+        binaries.executable()
     }
 
-    defaultConfig {
-        minSdk = 33
+    jvm()
 
-        consumerProguardFiles("consumer-rules.pro")
+    android {
+        namespace = "com.maxkach.scrolleffects"
+        compileSdk { version = release(36) }
     }
 
-    buildTypes {
-        release {
-            isMinifyEnabled = false
+    listOf(iosArm64(), iosSimulatorArm64()).forEach {
+        it.binaries.framework {
+            baseName = "scroll-effects"
         }
     }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
-    }
-    kotlinOptions {
-        jvmTarget = "11"
-    }
-    buildFeatures {
-        compose = true
+
+    sourceSets {
+        commonMain.dependencies {
+            implementation(libs.compose.material3)
+            implementation(libs.compose.runtime)
+            implementation(libs.compose.foundation)
+            implementation(libs.compose.ui)
+            implementation(libs.compose.components.resources)
+            implementation(libs.compose.ui.tooling.preview)
+
+            implementation(libs.kotlinx.datetime)
+        }
     }
 }
 
 mavenPublishing {
-    configure(
-        AndroidSingleVariantLibrary(
-            variant = "release",
-            sourcesJar = true,
-            publishJavadocJar = true,
-        )
-    )
-}
-
-dependencies {
-    implementation(platform(libs.androidx.compose.bom))
-    implementation(libs.androidx.compose.ui)
-    implementation(libs.androidx.compose.ui.graphics)
-    implementation(libs.androidx.compose.foundation)
-    implementation(libs.androidx.compose.animation)
+    // TODO: Add publishing info
 }
