@@ -20,14 +20,12 @@ import com.maxkach.scrolleffects.ScrollVelocity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
-import kotlinx.datetime.TimeZone
-import kotlinx.datetime.toLocalDateTime
 import kotlin.math.abs
 import kotlin.math.absoluteValue
 import kotlin.math.max
 import kotlin.math.sign
 import kotlin.math.tanh
-import kotlin.time.Clock
+import kotlin.time.TimeSource
 
 /**
  * Scroll-physics brain for one list. Watches finger velocity, turns it
@@ -49,6 +47,10 @@ internal class ScrollEffectController(
     private var isFlinging by mutableStateOf(false)
     private var lastDraggedIndex by mutableIntStateOf(UNSET_INDEX)
     private var relaxJob: Job? = null
+
+    // Monotonic time base for velocity timestamps. Always increasing, never
+    // wraps — unlike a wall-clock's nanosecond-of-second field.
+    private val startMark = TimeSource.Monotonic.markNow()
 
     // VelocityTracker wants running totals, not per-frame deltas.
     private var cumulativePositionPx = 0f
@@ -97,7 +99,7 @@ internal class ScrollEffectController(
             }
 
             cumulativePositionPx += delta
-            val nowMs = Clock.System.now().toLocalDateTime(TimeZone.UTC).nanosecond / 1_000_000L
+            val nowMs = startMark.elapsedNow().inWholeMilliseconds
             val position = if (orientation == Orientation.Vertical) {
                 Offset(0f, cumulativePositionPx)
             } else {
