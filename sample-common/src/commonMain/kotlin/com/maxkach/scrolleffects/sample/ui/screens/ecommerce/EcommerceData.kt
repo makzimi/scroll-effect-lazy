@@ -1,7 +1,7 @@
 package com.maxkach.scrolleffects.sample.ui.screens.ecommerce
 
 import org.jetbrains.compose.resources.DrawableResource
-import `scroll effect lazy`.sample_common.generated.resources.*
+import scroll_effect_lazy.sample_common.generated.resources.*
 
 data class Product(
     val id: Int,

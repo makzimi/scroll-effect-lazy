@@ -31,7 +31,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.painterResource
-import `scroll effect lazy`.sample_common.generated.resources.*
+import scroll_effect_lazy.sample_common.generated.resources.*
 import com.maxkach.scrolleffects.sample.ui.theme.SampleTheme
 
 private data class DemoEntry(
