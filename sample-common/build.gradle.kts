@@ -23,7 +23,13 @@ kotlin {
         androidResources.enable = true
     }
 
-    listOf(iosArm64(), iosSimulatorArm64())
+    listOf(iosArm64(), iosSimulatorArm64()).forEach {
+        it.binaries.framework {
+            baseName = "SampleCommon"
+            isStatic = true
+            binaryOption("bundleId", "com.maxkach.scrolleffects.sample.common")
+        }
+    }
 
     sourceSets {
         commonMain.dependencies {

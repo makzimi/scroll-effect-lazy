@@ -1,0 +1,6 @@
+// Fill in TEAM_ID with your Apple Developer Team ID to run on a physical device.
+// Find it in Xcode > Settings > Accounts, or at developer.apple.com > Membership.
+// Leave it empty to build and run on the iOS Simulator.
+TEAM_ID=
+BUNDLE_ID=com.maxkach.scrolleffects.sample
+APP_NAME=Scroll Effect Lazy
