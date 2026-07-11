@@ -4,13 +4,13 @@ plugins {
 }
 
 android {
-    namespace = "com.maxkach.elasticlist"
+    namespace = "com.maxkach.scrolleffects.sample"
     compileSdk {
         version = release(37)
     }
 
     defaultConfig {
-        applicationId = "com.maxkach.elasticlist"
+        applicationId = "com.maxkach.scrolleffects.sample"
         minSdk = 30
         targetSdk = 37
         versionCode = 1

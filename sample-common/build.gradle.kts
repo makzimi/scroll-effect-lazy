@@ -18,7 +18,7 @@ kotlin {
     jvm()
 
     android {
-        namespace = "com.maxkach.elasticlist.common"
+        namespace = "com.maxkach.scrolleffects.sample.common"
         compileSdk { version = release(37) }
         androidResources.enable = true
     }

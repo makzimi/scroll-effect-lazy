@@ -1,13 +1,10 @@
 import androidx.compose.ui.window.singleWindowApplication
-import com.maxkach.elasticlist.navigation.AppNavigation
-import com.maxkach.elasticlist.ui.theme.ElasticListTheme
+import com.maxkach.scrolleffects.sample.App
 
 fun main() {
     singleWindowApplication(
-        title = "Elastic List"
+        title = "Scroll Effect Lazy"
     ) {
-        ElasticListTheme {
-            AppNavigation()
-        }
+        App()
     }
 }
