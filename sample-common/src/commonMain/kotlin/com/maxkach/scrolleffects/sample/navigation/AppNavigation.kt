@@ -25,7 +25,7 @@ object Destinations {
 
 @Composable
 fun AppNavigation() {
-    var effectPreset by rememberSaveable { mutableStateOf(EffectPreset.None) }
+    var effectPreset by rememberSaveable { mutableStateOf(EffectPreset.Off) }
     val navController = rememberNavController()
     NavHost(navController = navController, startDestination = Destinations.HOME) {
         composable(Destinations.HOME) {

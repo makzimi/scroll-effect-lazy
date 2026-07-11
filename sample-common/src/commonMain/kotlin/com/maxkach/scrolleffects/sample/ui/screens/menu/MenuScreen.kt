@@ -41,7 +41,7 @@ import com.maxkach.scrolleffects.ScrollEffectLazyColumn
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
 @Composable
 fun MenuScreen(
-    effectPreset: EffectPreset = EffectPreset.None,
+    effectPreset: EffectPreset = EffectPreset.Off,
     onEffectPreset: (EffectPreset) -> Unit = {},
     onBack: () -> Unit = {},
 ) {

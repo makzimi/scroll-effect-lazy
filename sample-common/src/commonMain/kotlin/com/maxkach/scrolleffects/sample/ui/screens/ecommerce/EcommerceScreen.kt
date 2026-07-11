@@ -48,7 +48,7 @@ import com.maxkach.scrolleffects.ScrollEffectLazyColumn
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun EcommerceScreen(
-    effectPreset: EffectPreset = EffectPreset.None,
+    effectPreset: EffectPreset = EffectPreset.Off,
     onEffectPreset: (EffectPreset) -> Unit = {},
     onBack: () -> Unit = {},
 ) {

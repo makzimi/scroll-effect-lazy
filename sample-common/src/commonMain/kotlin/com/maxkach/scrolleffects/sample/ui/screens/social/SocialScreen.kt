@@ -43,7 +43,7 @@ import com.maxkach.scrolleffects.ScrollEffectLazyRow
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SocialScreen(
-    effectPreset: EffectPreset = EffectPreset.None,
+    effectPreset: EffectPreset = EffectPreset.Off,
     onEffectPreset: (EffectPreset) -> Unit = {},
     onBack: () -> Unit = {},
 ) {
