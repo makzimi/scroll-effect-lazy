@@ -1,5 +1,7 @@
 # Scroll Effect Lazy
 
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.makzimi/scroll-effects)](https://central.sonatype.com/artifact/io.github.makzimi/scroll-effects)
+
 Small Compose lib that makes `LazyColumn` / `LazyRow` feel a bit rubbery. Scroll fast and the items at the front lag behind a little, like they're on a stretchy band. Nothing weird happens to layout or measuring, it's all just `graphicsLayer` under the hood.
 
 <img width="720" height="405" alt="Timeline_1x_24fps" src="https://github.com/user-attachments/assets/95bb6592-0502-498e-aa71-89d22431e6a1" />
@@ -8,25 +10,29 @@ Small Compose lib that makes `LazyColumn` / `LazyRow` feel a bit rubbery. Scroll
 
 ## Install
 
-Distributed via [JitPack](https://jitpack.io).
+Published to **Maven Central**, so no extra repositories are needed beyond the usual `mavenCentral()`.
 
-In your `settings.gradle.kts`:
+**Kotlin Multiplatform** — add it to `commonMain`:
 
 ```kotlin
-dependencyResolutionManagement {
-    repositories {
-        google()
-        mavenCentral()
-        maven("https://jitpack.io")
+kotlin {
+    sourceSets {
+        commonMain.dependencies {
+            implementation("io.github.makzimi:scroll-effects:0.1.0")
+        }
     }
 }
 ```
 
-In your app/library `build.gradle.kts`:
+**Android-only** (or any single-platform module):
 
 ```kotlin
-implementation("com.github.makzimi:scroll-effect-lazy:0.1.0")
+dependencies {
+    implementation("io.github.makzimi:scroll-effects:0.1.0")
+}
 ```
+
+Targets: Android, iOS, desktop (JVM), and web (Wasm/JS).
 
 ---
 
@@ -141,3 +147,21 @@ How floppy you want the rubber.
 | `Hard` | Stiff, barely there | Small |
 | `Normal` | Just right | Medium |
 | `Loose` | Soft, really obvious | Big |
+
+---
+
+## Running the samples
+
+The repo ships a sample app that shows the effect across platforms. The UI is shared
+in `sample-common`; each platform just hosts it.
+
+| Platform | How to run |
+|----------|------------|
+| **Android** | Open in Android Studio and run the `sample-android` app, or `./gradlew :sample-android:installDebug` |
+| **iOS** | Open `iosApp/iosApp.xcodeproj` in Xcode and run. To run on a device, set your Apple Team ID in `iosApp/Configuration/Config.xcconfig` |
+| **Desktop (JVM)** | `./gradlew :sample-common:run` |
+| **Web (Wasm/JS)** | `./gradlew :sample-common:wasmJsBrowserDevelopmentRun`, then open http://localhost:8080 |
+
+> Web needs a browser with WebAssembly GC support (Chrome/Edge 119+, Firefox 120+, Safari 18+).
+
+Toggle the **Off / On** switch at the top of any list screen to compare a plain list with the elastic effect.
