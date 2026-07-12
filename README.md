@@ -1,6 +1,7 @@
 # Scroll Effect Lazy
 
 [![Maven Central](https://img.shields.io/maven-central/v/io.github.makzimi/scroll-effects)](https://central.sonatype.com/artifact/io.github.makzimi/scroll-effects)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 Small Compose lib that makes `LazyColumn` / `LazyRow` feel a bit rubbery. Scroll fast and the items at the front lag behind a little, like they're on a stretchy band. Nothing weird happens to layout or measuring, it's all just `graphicsLayer` under the hood.
 
@@ -165,3 +166,15 @@ in `sample-common`; each platform just hosts it.
 > Web needs a browser with WebAssembly GC support (Chrome/Edge 119+, Firefox 120+, Safari 18+).
 
 Toggle the **Off / On** switch at the top of any list screen to compare a plain list with the elastic effect.
+
+---
+
+## License
+
+```
+MIT License
+
+Copyright (c) 2026 Maxim Kachinkin
+```
+
+Released under the [MIT License](LICENSE) — do what you want, just keep the notice.
