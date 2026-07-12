@@ -48,5 +48,8 @@ kotlin {
 }
 
 mavenPublishing {
-    // TODO: Add publishing info
+    // Coordinates and POM metadata are read from gradle.properties
+    // (GROUP, POM_ARTIFACT_ID, VERSION_NAME, POM_*).
+    publishToMavenCentral()
+    signAllPublications()
 }
