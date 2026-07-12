@@ -19,7 +19,7 @@ Published to **Maven Central**, so no extra repositories are needed beyond the u
 kotlin {
     sourceSets {
         commonMain.dependencies {
-            implementation("io.github.makzimi:scroll-effects:0.1.0")
+            implementation("io.github.makzimi:scroll-effects:0.2.0")
         }
     }
 }
@@ -29,7 +29,7 @@ kotlin {
 
 ```kotlin
 dependencies {
-    implementation("io.github.makzimi:scroll-effects:0.1.0")
+    implementation("io.github.makzimi:scroll-effects:0.2.0")
 }
 ```
 
